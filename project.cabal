@@ -1,0 +1,57 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.36.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           project
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/intro#readme>
+homepage:       https://github.com/githubuser/intro#readme
+bug-reports:    https://github.com/githubuser/intro/issues
+author:         Rhys Newbury
+maintainer:     Rhys Newbury
+copyright:      2023 Rhys Newbury
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    package.yaml
+    stack.yaml
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/intro
+
+library
+  exposed-modules:
+      Instances
+      Main
+      Parser
+  other-modules:
+      Paths_project
+  hs-source-dirs:
+      src
+  default-extensions:
+      InstanceSigs
+  ghc-options: -Weverything -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-implicit-prelude -Wno-prepositive-qualified-module -Wno-missing-deriving-strategies -Wno-missing-safe-haskell-mode -Wno-missing-kind-signatures -Wno-unused-top-binds -Wno-unused-matches
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite batch
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_project
+  hs-source-dirs:
+      test
+  build-depends:
+      Glob
+    , base >=4.7 && <5
+    , directory
+    , doctest
+    , filepath
+    , project
+  default-language: Haskell2010
